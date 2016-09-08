@@ -1,0 +1,5 @@
+---
+- hosts: test
+  remote_user: ansible
+  tasks: 
+   - command: passwd -l ansible

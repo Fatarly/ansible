@@ -1,0 +1,10 @@
+---
+- hosts: test
+  remote_user: sis
+  tasks:
+    - name: Allow 'ansible' to have passwordless sudo
+      lineinfile:
+        dest: /etc/sudoers
+        state: present
+        regexp: '^ansible'
+        line: 'ansible ALL=(ALL) NOPASSWD: ALL'

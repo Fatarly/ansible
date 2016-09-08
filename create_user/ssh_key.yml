@@ -1,0 +1,5 @@
+---
+- hosts: test
+  remote_user: ansible
+  tasks:
+  - authorized_key: user=ansible key=https://github.com/Fatarly.keys validate_certs=no
